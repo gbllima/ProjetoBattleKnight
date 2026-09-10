@@ -5,6 +5,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
 require_once __DIR__ . '/mysql_compat.php';
 require_once __DIR__ . '/../language/ru.php';
+require_once __DIR__ . '/../language/pt_br_override.php';
 
 $title = "BattleKnight The Empire";
 $announcement = $lang['announc'] ?? '';
