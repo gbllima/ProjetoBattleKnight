@@ -1,10 +1,11 @@
 <?php
-$gen_stats=gen_stats(48);
-$town=town($_GET["town"]);
-$config=config();
-if (!$config[3][1]) msg1($lang['regClosed']);
-$factions=factions();
-$_SESSION["code"]=rand(1000, 9999);
+$gen_stats = gen_stats(48);
+$config = config();
+if (isset($config[3][1]) && !$config[3][1]) {
+    msg1($lang['regClosed']);
+}
+$factions = factions();
+$_SESSION["code"] = rand(1000, 9999);
 ?>
 <form name="form1" method="post" action="register_.php">
       <table>
@@ -36,17 +37,12 @@ $_SESSION["code"]=rand(1000, 9999);
          <td>
          <?php echo $lang['typeCode'] ?>: <?php echo $_SESSION["code"];?>
          </td>
-         <td><input class='textbox' type="text" name="code">
-      </td>
+         <td><input class='textbox' type="text" name="code"></td>
       </tr>
 
       <tr>
          <td></td>
          <td><input class='button' type="submit" name="reg" value="<?php echo $lang['submit'] ?>"></td>
       </tr>
-
-
       </table>
-
-      </form>
-</p>
+</form>
