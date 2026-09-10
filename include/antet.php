@@ -3,6 +3,10 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
 
+if (!headers_sent()) {
+    header('Content-Type: text/html; charset=UTF-8');
+}
+
 require_once __DIR__ . '/mysql_compat.php';
 require_once __DIR__ . '/../language/ru.php';
 require_once __DIR__ . '/../language/pt_br_override.php';
