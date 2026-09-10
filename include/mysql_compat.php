@@ -81,6 +81,12 @@ if (!function_exists('mysql_connect')) {
         return mysqli_real_escape_string($link, $unescaped_string);
     }
 
+    // Deprecated even before mysql_* was removed, but the original game still uses it.
+    function mysql_escape_string($unescaped_string)
+    {
+        return mysql_real_escape_string($unescaped_string);
+    }
+
     function mysql_error($link_identifier = null)
     {
         $link = $link_identifier ?: ($GLOBALS['_legacy_mysql_link'] ?? null);
