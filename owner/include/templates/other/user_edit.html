@@ -1,0 +1,110 @@
+<p>
+	In here you can edit your users
+	you can modify the name, description, email, and other !
+	
+</p>
+
+<form action='./?do=edit-user:[[id]]' method='POST'>
+	<ul id='unit_tab' class='shadetabs'>
+	<li><a href='#' rel='tcontent1' class='selected'>Basic</a></li>
+	<li><a href='#' rel='tcontent2'>Password</a></li>
+	<li><a href='#' rel='tcontent3'>OnGame</a></li>
+	<li><a href='#' rel='tcontent4'>Description</a></li>
+	</ul>
+	<div style='border:1px solid gray; width:95%; margin-bottom: 1em; padding: 10px;' align='center'>
+
+	<div id='tcontent1' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Id</td>
+				<td>[[id]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Name</td>
+				<td>[[name]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Email</td>
+				<td>[[email]]</td>
+			</tr>
+			<tr>
+				<td class='left'>grPath</td>
+				<td>[[grpath]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Level</td>
+				<td>[[level]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Languages</td>
+				<td>[[lang]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Join Date</td>
+				<td>[[joindate]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Last Visit</td>
+				<td>[[lastvisit]]</td>
+			</tr>
+
+			</table>
+	</div>
+
+	<div id = 'tcontent2' class = 'tabcontent'>
+		<table class = 'box'>
+		<tr>
+			<td class = 'left'>Old Password</td>
+			<td colspan = '2'>[[oldpass]]</td>
+		</tr>
+		<tr>
+			<td class = 'left'>New Password</td>
+			<td>[[newpass]]</td>
+		<tr>
+			<td class = 'left'>Retype Password</td>
+			<td>[[repass]]</td>
+		</tr>
+		</table>
+	</div>
+
+	<div id='tcontent3' class='tabcontent'>
+		<table class='box'>
+		<tr>
+			<td class='left'>Faction</td>
+			<td  colspan='3'>[[faction]]</td>
+		</tr>
+		<tr>
+			<td class='left'>Alliance</td>
+			<td colspan='3'>[[allyn]] - [[allyid]]</td>
+		</tr>
+		<tr>
+			<td class='left'>Points</td>
+			<td colspan='3'>[[point]]</td>
+		</tr>
+		<tr>
+			<td class='left' rowspan='[[ntown]]'>Towns List</td>
+			<td  colspan='3'>[[town]]</td>
+		</tr>
+		</table>
+	</div>
+	<div id='tcontent4' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Description</td>
+				<td><textarea name='desc' cols='50' rows='15'>[[desc]]</textarea></td>
+			</tr>
+		</table>
+	</div>
+	<input type='submit' name='save' value='Save'> <input type='reset' value='Reset'>
+	</div>
+</form>
+	<script type='text/javascript'>
+
+	var myflowers=new ddtabcontent('unit_tab')
+	myflowers.setpersist(true)
+	myflowers.setselectedClassTarget('link')
+	myflowers.init()
+
+	</script>
+	
+<center><a href='?do=users-list'>Go Back</a></center>

@@ -1,0 +1,42 @@
+<SCRIPT type="text/javascript" src="./include/javascript/dropdowntabs.js"></SCRIPT>
+
+
+<div id="slidemenu" class="slidetabsmenu">
+<ul>
+<li><a href="./" title="Home"><span>Home</span></a></li>
+<li><a href="#" title="Manages Your Game Content !" rel="dropmenu1_c"><span>Manages</span></a></li>
+<li><a href="#" title="Do Some Task ?" rel="dropmenu2_c"><span>Task</span></a></li>
+<li><a href="?do=logout" title="Logout from This Session"><span>Logout</span></a></li>
+</ul>
+</div>
+
+<BR style="clear: left;">
+<BR class="IEonlybr">
+
+
+
+<!--1st drop down menu -->                                                   
+<DIV id="dropmenu1_c" class="dropmenudiv_c">
+<A href="?do=users-list">Users</A>
+<A href="?do=towns-list">Towns</A>
+<A href="?do=allies-list">Alliances</A>
+
+<A href="?do=factions">Factions</A>
+<A href="?do=buildings">Buildings</A>
+<A href="?do=units">Units</A>
+<A href="?do=weapons">Weapons</A>
+</DIV>
+
+
+<!--2nd drop down menu -->                                                
+<DIV id="dropmenu2_c" class="dropmenudiv_c" style="width: 150px;">
+<A href="?do=summary">Summary</A>
+<A href="?do=config">Configuration</A>
+<A href="?do=mods">Mods</A>
+</DIV>
+
+<!-- Init The Menu -->
+<SCRIPT type="text/javascript">
+//SYNTAX: tabdropdown.init("menu_id", [integer OR "auto"])
+tabdropdown.init("slidemenu")
+</SCRIPT>

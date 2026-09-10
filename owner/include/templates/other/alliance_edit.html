@@ -1,0 +1,73 @@
+<p>
+	In here you can edit the alliance, 
+	you can modify the name of alliance, kick the members, see pacts, change the owner and other !
+	
+</p>
+
+<form action='./?do=edit-ally:[[id]]' method='POST'>
+	<ul id='alliance_tab' class='shadetabs'>
+	<li><a href='#' rel='tcontent1' class='selected'>Basic</a></li>
+	<li><a href='#' rel='tcontent2'>Member</a></li>
+	<li><a href='#' rel='tcontent3'>Pacts</a></li>
+	<li><a href='#' rel='tcontent4'>Description</a></li>
+	</ul>
+	<div style='border:1px solid gray; width:95%; margin-bottom: 1em; padding: 10px;' align='center'>
+
+	<div id='tcontent1' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Id</td>
+				<td>[[id]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Name</td>
+				<td>[[name]]</td>
+			</tr>
+
+			<tr>
+				<td class='left'>Founder</td>
+				<td>[[founder]]</td>
+			</tr>
+
+			</table>
+	</div>
+
+	<div id = 'tcontent2' class = 'tabcontent'>
+		<table class = 'box'>
+		<tr>
+			<td class = 'left' rowspan='[[countm]]'>Members</td>
+			<td colspan='4'>[[members]]</td>
+		</tr>
+		</table>
+	</div>
+
+	<div id='tcontent3' class='tabcontent'>
+		<table class='box'>
+		<tr>
+			<td class='left' rowspan='[[countp]]'>Pacts</td>
+			<td  colspan='3'>[[pacts]]</td>
+		</tr>
+		</table>
+	</div>
+
+	<div id='tcontent4' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Description</td>
+				<td><textarea name='desc' cols='50' rows='15'>[[desc]]</textarea></td>
+			</tr>
+		</table>
+	</div>
+	<input type='submit' name='save' value='Save'> <input type='reset' value='Reset'>
+	</div>
+</form>
+	<script type='text/javascript'>
+
+	var myflowers=new ddtabcontent('alliance_tab')
+	myflowers.setpersist(true)
+	myflowers.setselectedClassTarget('link')
+	myflowers.init()
+
+	</script>
+	
+<center><a href='?do=allies-list'>Go Back</a></center>

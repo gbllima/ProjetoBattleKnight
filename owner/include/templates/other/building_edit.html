@@ -1,0 +1,90 @@
+<p>
+	In here you can customize buildings as you want, 
+	you can modify the name of building, input, output, requirement, duration, and other !
+	
+</p>
+
+<form action='./?do=edit-bd:[[faction]]-[[type]]' method='POST'>
+	<ul id='building_tab' class='shadetabs'>
+	<li><a href='#' rel='tcontent1' class='selected'>Basic</a></li>
+	<li><a href='#' rel='tcontent2'>Input/Output</a></li>
+	<li><a href='#' rel='tcontent3'>Requirement</a></li>
+	<li><a href='#' rel='tcontent4'>Dur/Upk</a></li>
+	<li><a href='#' rel='tcontent5'>Description</a></li>
+	</ul>
+	<div style='border:1px solid gray; width:95%; margin-bottom: 1em; padding: 10px;' align='center'>
+
+	<div id='tcontent1' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Type</td>
+				<td>[[type]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Name</td>
+				<td>[[name]]</td>
+			</tr>
+
+			<tr>
+				<td class='left'>Picture</td>
+				<td><img src='../default/1/b[[type]].png' width='60px' height='85px'></td>
+			</tr>
+
+			</table>
+	</div>
+
+	<div id = 'tcontent2' class = 'tabcontent'>
+		<table class = 'box'>
+		<tr>
+			<td class = 'left'>Input</td>
+			<td colspan = '2'>[[res]]</td>
+		</tr>
+		<tr>
+			<td class = 'left' rowspan = '11'>Output</td>
+			<td colspan = '2'>[[out]]</td>
+		</tr>
+		</table>
+	</div>
+
+	<div id='tcontent3' class='tabcontent'>
+		<table class='box'>
+		<tr>
+			<td class='left'>Requirements</td>
+			<td>[[req]]</td>
+		</tr>
+		</table>
+	</div>
+
+	<div id='tcontent4' class='tabcontent'>
+		<table class='box'>
+		<tr>
+			<td class='left' rowspan='11'>Duration</td>
+			[[dur]]
+		</tr>
+		<tr>
+			<td class='left' rowspan='11'>Upkeep</td>
+			[[upk]]
+		</tr>
+		</table>
+	</div>
+	<div id='tcontent5' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Description</td>
+				<td><textarea name='desc' cols='50' rows='15'>[[desc]]</textarea></td>
+			</tr>
+		</table>
+	</div>
+	<input type='submit' name='save' value='Save'> <input type='reset' value='Reset'>
+	</div>
+</form>
+	<script type='text/javascript'>
+
+	var myflowers=new ddtabcontent('building_tab')
+	myflowers.setpersist(true)
+	myflowers.setselectedClassTarget('link')
+	myflowers.init()
+
+	</script>
+	
+<center><a href='?do=buildings'>Go Back</a></center>

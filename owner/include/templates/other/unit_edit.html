@@ -1,0 +1,76 @@
+<p>
+	In here you can customize units each faction to make your game keep rock!
+	you can modify the name of units, cost, ability, requirement, duration, and other !
+	
+</p>
+
+<form action='./?do=edit-ut:[[faction]]-[[type]]' method='POST'>
+	<ul id='unit_tab' class='shadetabs'>
+	<li><a href='#' rel='tcontent1' class='selected'>Basic</a></li>
+	<li><a href='#' rel='tcontent2'>Cost/Ability/Dur</a></li>
+	<li><a href='#' rel='tcontent3'>Requirement</a></li>
+	<li><a href='#' rel='tcontent4'>Description</a></li>
+	</ul>
+	<div style='border:1px solid gray; width:95%; margin-bottom: 1em; padding: 10px;' align='center'>
+
+	<div id='tcontent1' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Type</td>
+				<td>[[type]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Name</td>
+				<td>[[name]]</td>
+			</tr>
+
+			<tr>
+				<td class='left'>Picture</td>
+				<td><img src='../default/1/2[[type]].gif' width='40px' height='45px'></td>
+			</tr>
+
+			</table>
+	</div>
+
+	<div id = 'tcontent2' class = 'tabcontent'>
+		<table class = 'box'>
+		<tr>
+			<td class = 'left'>Cost(n)</td>
+			<td colspan = '2'>[[res]]</td>
+		</tr>
+		<tr>
+			<td class = 'left' rowspan = '11'>Ability & Duration</td>
+			<td colspan = '2'>[[abt]]</td>
+		</tr>
+		</table>
+	</div>
+
+	<div id='tcontent3' class='tabcontent'>
+		<table class='box'>
+		<tr>
+			<td class='left'>Requirements</td>
+			<td>[[req]]</td>
+		</tr>
+		</table>
+	</div>
+	<div id='tcontent4' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Description</td>
+				<td><textarea name='desc' cols='50' rows='15'>[[desc]]</textarea></td>
+			</tr>
+		</table>
+	</div>
+	<input type='submit' name='save' value='Save'> <input type='reset' value='Reset'>
+	</div>
+</form>
+	<script type='text/javascript'>
+
+	var myflowers=new ddtabcontent('unit_tab')
+	myflowers.setpersist(true)
+	myflowers.setselectedClassTarget('link')
+	myflowers.init()
+
+	</script>
+	
+<center><a href='?do=units'>Go Back</a></center>

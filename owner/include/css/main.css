@@ -1,0 +1,180 @@
+/*
+	-----------------------------------------------------||
+	DevAdm - A New Admin Panel For Devana
+	Version	: 0.3.1 Beta
+	Author : I Putu Yoga Permana
+	Date Released	: 02 January 2009
+	
+	Visit http://devana.eu/forum/viewtopic.php?f=20&t=81
+	for News and update
+	------------------------------------------------------||
+*/
+
+body {
+	background: #ececec;
+    	font: 11px Verdana; 
+    	padding: 0px; 
+}
+
+table { 
+   	font: 11px Verdana;
+	background: #ffffff;
+}
+
+td { 
+    	vertical-align: top;
+}
+
+input { 
+   	 font: 11px Verdana;
+}
+
+button {
+    	font: 11px Verdana;
+}
+
+select {
+    	font: 11px Verdana;
+}
+	
+img { 
+   	border-style: none; 
+}
+
+a { 
+	color: black;
+    	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover { 
+    	color: red; 
+}
+	
+/*Custom Class*/
+
+.main { 
+    	border: solid 1px black; 
+}
+
+.content {
+    padding-left: 11px;
+}
+
+.grey { 
+    color: #999999; 
+}
+
+.red { 
+    color: #ff0000; 
+}
+
+.blue { 
+    color: #0000ff; 
+}
+
+
+
+
+.big { 
+    	font: 12px Verdana; 
+    	background-color: #ececec;
+	color: black;
+    	border: solid 1px grey; 
+    	padding: 2px; 
+    	margin-bottom: 3px;
+	text-align: left;
+}
+	
+.box {
+	border: 1px solid #939393;
+	width: 98%;
+}
+
+.title {
+	font-size: 16px;
+	}
+.helpbox {
+	background-color: #EFEFEF;
+	font-size: 13px;
+	width: 98%;
+	padding: 3px;
+	border: 1px dashed gray;	
+}
+
+.box td {
+	padding: 1px;
+	border-bottom: 1px solid #939393;
+    	background-color: #ececec;
+}
+    	
+td.head {
+	background-color: #c9c9c9;
+}
+
+td.left {
+	background-color: #cfcfcf;
+	font-weight: bold;
+	width: 25%;
+}
+.menu ul, .menu {
+	border-top: 1 px solid grey;
+	margin-top: -5px;
+	text-align: left;
+}
+
+.menu a {
+	font-size:11px;
+	font-style: comic sans ms;
+	margin-left: 3px;
+	text-align: left;
+}
+.menu a:hover {
+	color: grey;
+	margin-left: 5px;
+}
+.menu li {
+	margin-left: -43px;
+	border-right: 2px grey solid;
+	border-bottom: 1px black dotted;
+	padding: 0px 0px 5px;
+	background: #ffffff;
+	display:block;
+	text-align: left;
+}
+.menu li:hover {
+	margin-left: -43px;
+	border-right: 2px red solid;
+
+}
+.copyright {
+	background: #c9c9c9;
+	font-size: 11px;
+}
+table#alphabet {
+	background-color: white;
+	border: 1px solid;
+}
+td.list {
+	padding: 3px; 
+	border: 1px solid black;
+	margin: 2px;
+}
+td.av {
+	padding: 3px; 
+	border: 1px solid black;
+	margin: 2px;
+}
+td.av:hover {
+	background-color: #c9c9c9;
+}
+td.now {
+	padding: 3px;
+	background-color: #c9c9c9;	
+	border: 1px solid grey;
+	margin: 2px;
+}
+.list_header {
+	font-size: 15px;
+}
+

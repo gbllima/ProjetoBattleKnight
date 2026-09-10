@@ -1,0 +1,126 @@
+<p>
+	In here you can manages your user's town
+	you can modify the name, resource, building, weapons and other !
+	
+</p>
+
+<form action='./?do=edit-town:[[id]]' method='POST'>
+	<ul id='unit_tab' class='shadetabs'>
+	<li><a href='#' rel='tcontent1' class='selected'>Basic</a></li>
+	<li><a href='#' rel='tcontent2'>Military</a></li>
+	<li><a href='#' rel='tcontent3'>Buildings</a></li>
+	<li><a href='#' rel='tcontent4'>Resources & Limits</a></li>
+	<li><a href='#' rel='tcontent5'>Land</a></li>
+	<li><a href='#' rel='tcontent6'>Description</a></li>
+	</ul>
+	<div style='border:1px solid gray; width:95%; margin-bottom: 1em; padding: 10px;' align='center'>
+
+	<div id='tcontent1' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Id</td>
+				<td>[[id]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Name</td>
+				<td>[[name]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Owner</td>
+				<td>[[owner]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Population</td>
+				<td>[[pop]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Upkeep</td>
+				<td>[[upk]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Morale</td>
+				<td>[[morale]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Population</td>
+				<td>[[pop]]</td>
+			</tr>
+			<tr>
+				<td class='left'>General</td>
+				<td>[[general]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Water/Sea</td>
+				<td>[[ws]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Last Check</td>
+				<td>[[lastcheck]]</td>
+			</tr>
+			</table>
+	</div>
+
+	<div id = 'tcontent2' class = 'tabcontent'>
+		<table class = 'box'>
+		<tr>
+			<td class = 'left'>Weapons</td>
+			<td colspan = '2'>[[weapons]]</td>
+		</tr>
+		<tr>
+			<td class = 'left' rowspan = '11'>Army</td>
+			<td colspan = '2'>[[army]]</td>
+		</tr>
+		</table>
+	</div>
+
+	<div id='tcontent3' class='tabcontent'>
+		<table class='box'>
+		<tr>
+			<td class='left'>Buildings</td>
+			<td>[[buildings]]</td>
+		</tr>
+		</table>
+	</div>
+	<div id='tcontent4' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Resources</td>
+				<td>[[resources]]</td>
+				<td>[[productions]]</td>
+				<td>[[limits]]</td>
+			</tr>
+			<tr>
+				<td rowspan='11' class='left'>Limits</td>
+				<td colspan='3'>[[mlim]]</td>
+			</tr>
+		</table>
+	</div>
+	<div id='tcontent5' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left' rowspan='5'>Lands</td>
+				<td colspan='2'>[[land]]<td>
+			</tr>
+		</table>
+	</div>
+	<div id='tcontent6' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Description</td>
+				<td><textarea name='desc' cols='50' rows='15'>[[desc]]</textarea></td>
+			</tr>
+		</table>
+	</div>
+	<input type='submit' name='save' value='Save'> <input type='reset' value='Reset'>
+	</div>
+</form>
+	<script type='text/javascript'>
+
+	var myflowers=new ddtabcontent('unit_tab')
+	myflowers.setpersist(true)
+	myflowers.setselectedClassTarget('link')
+	myflowers.init()
+
+	</script>
+	
+<center><a href='?do=units'>Go Back</a></center>

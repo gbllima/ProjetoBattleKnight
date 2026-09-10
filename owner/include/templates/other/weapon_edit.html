@@ -1,0 +1,67 @@
+<p>
+	In here you can customize weapons each faction to make the units more powerful.
+	You can modify the name of weapons, cost, duration, and description !
+	
+</p>
+
+<form action='./?do=edit-wp:[[faction]]-[[type]]' method='POST'>
+	<ul id='unit_tab' class='shadetabs'>
+	<li><a href='#' rel='tcontent1' class='selected'>Basic</a></li>
+	<li><a href='#' rel='tcontent2'>Cost/Duration</a></li>
+	<li><a href='#' rel='tcontent3'>Description</a></li>
+	</ul>
+	<div style='border:1px solid gray; width:95%; margin-bottom: 1em; padding: 10px;' align='center'>
+
+	<div id='tcontent1' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Type</td>
+				<td>[[type]]</td>
+			</tr>
+			<tr>
+				<td class='left'>Name</td>
+				<td>[[name]]</td>
+			</tr>
+
+			<tr>
+				<td class='left'>Picture</td>
+				<td><img src='../default/1/1[[type]].gif' width='30px' height='35px'></td>
+			</tr>
+
+			</table>
+	</div>
+
+	<div id = 'tcontent2' class = 'tabcontent'>
+		<table class = 'box'>
+		<tr>
+			<td class = 'left'>Cost(n)</td>
+			<td colspan = '2'>[[res]]</td>
+		</tr>
+		<tr>
+			<td class = 'left' rowspan = '11'>Duration</td>
+			<td colspan = '2'>[[dur]]</td>
+		</tr>
+		</table>
+	</div>
+
+	<div id='tcontent3' class='tabcontent'>
+		<table class='box'>
+			<tr>
+				<td class='left'>Description</td>
+				<td><textarea name='desc' cols='50' rows='15'>[[desc]]</textarea></td>
+			</tr>
+		</table>
+	</div>
+	<input type='submit' name='save' value='Save'> <inpwp type='reset' value='Reset'>
+	</div>
+</form>
+	<script type='text/javascript'>
+
+	var myflowers=new ddtabcontent('unit_tab')
+	myflowers.setpersist(true)
+	myflowers.setselectedClassTarget('link')
+	myflowers.init()
+
+	</script>
+	
+<center><a href='?do=units'>Go Back</a></center>
