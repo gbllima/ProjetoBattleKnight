@@ -1,12 +1,19 @@
-<?
-
+<?php
 
 //////Page/////
- $type = $_GET['type'];
+$type = isset($_GET['type']) ? preg_replace('/[^a-z_]/i', '', $_GET['type']) : '';
 
- if(empty($type)){$type = "news"; $title2 = Новости;}
- else if($type=="news")$title2 = Новости;
- else if($type=="register"){$title2 = Регистрация;}
- else if($type=="contact"){$title2 = Контакты;}
-else{}
+if (empty($type)) {
+    $type = "news";
+    $title2 = "Novidades";
+} elseif ($type === "news") {
+    $title2 = "Novidades";
+} elseif ($type === "register") {
+    $title2 = "Registro";
+} elseif ($type === "contact") {
+    $title2 = "Contato";
+} else {
+    $type = "news";
+    $title2 = "Novidades";
+}
 ?>
