@@ -5,4 +5,14 @@
 <link href="template/css/default.css" rel="stylesheet" type="text/css" />
 <script src="js/func.js" type="text/javascript"></script>
 <script src="js/menu.js" type="text/javascript"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('img[src^="../../template/"]').forEach(function (img) {
+        img.src = img.getAttribute('src').replace('../../template/', 'template/');
+    });
+    document.querySelectorAll('a[href^="/prem.php"]').forEach(function (link) {
+        link.href = link.getAttribute('href').replace('/prem.php', 'prem.php');
+    });
+});
+</script>
 </head>
