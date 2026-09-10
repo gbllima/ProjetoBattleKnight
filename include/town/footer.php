@@ -8,7 +8,7 @@
 </tr>
 </table>
 <div style="clear:both;position:relative;left:10px;" class="bottom" >
-<center><table class="bottom" background="../../template/town/footer.gif" width="950" border="1">
+<center><table class="bottom" background="template/town/footer.gif" width="950" border="1">
 <tr>
 <td>
 </td>
